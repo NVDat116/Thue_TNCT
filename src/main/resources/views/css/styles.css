@@ -1,0 +1,5 @@
+.combo-box .list-cell {
+    -fx-alignment: center-left;
+    -fx-padding: 5px 10px;
+    -fx-pref-width: 150px;
+}

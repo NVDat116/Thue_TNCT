@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeclaredController">
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label text="Kê khai và nộp hồ sơ">
+            <font>
+               <Font size="24.0" />
+            </font>
+         </Label>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label fx:id="label" text="Tên người nộp thuế">
+            <HBox.margin>
+               <Insets right="20.0" />
+            </HBox.margin></Label>
+         <TextField fx:id="name" prefWidth="200.0" />
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label prefWidth="100.0" text="Loại giấy tờ">
+            <HBox.margin>
+               <Insets right="20.0" />
+            </HBox.margin>
+         </Label>
+         <ComboBox fx:id="comboBoxtype" onAction="#setComboBoxChanged" prefWidth="200.0" promptText="--Loại giấy tờ--" />
+      </children></HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label prefWidth="100.0" text="Số giấy tờ">
+            <HBox.margin>
+               <Insets right="20.0" />
+            </HBox.margin>
+         </Label>
+         <TextField fx:id="numDocument" prefWidth="200.0" />
+      </children></HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label prefWidth="100.0" text="Ngày cấp">
+            <HBox.margin>
+               <Insets right="20.0" />
+            </HBox.margin>
+         </Label>
+         <TextField fx:id="releaseDate" prefWidth="200.0" />
+      </children></HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label prefWidth="100.0" text="Email">
+            <HBox.margin>
+               <Insets right="20.0" />
+            </HBox.margin>
+         </Label>
+         <TextField fx:id="email" prefWidth="200.0" />
+      </children></HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Button fx:id="continueBtn" mnemonicParsing="false" prefWidth="100.0" text="Tiếp tục">
+            <HBox.margin>
+               <Insets left="20.0" right="20.0" />
+            </HBox.margin>
+         </Button>
+         <Button fx:id="backBtn" mnemonicParsing="false" prefWidth="100.0" text="Quay lại">
+            <HBox.margin>
+               <Insets left="20.0" right="20.0" />
+            </HBox.margin>
+         </Button>
+      </children></HBox>
+</VBox>
