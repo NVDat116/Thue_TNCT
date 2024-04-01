@@ -21,7 +21,7 @@ public class MainController implements Initializable {
     @FXML
     private Label labelU;
     @FXML
-    private ComboBox comboBox;
+    private ComboBox<String> comboBox;
 
     @FXML
     private Button submitBtn;

@@ -1,4 +1,5 @@
 module com.example.thue_tnct {
+    requires transitive javafx.graphics;
     requires javafx.controls;
     requires javafx.fxml;
 
