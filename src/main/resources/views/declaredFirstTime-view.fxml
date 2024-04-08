@@ -9,72 +9,134 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeclaredController">
-   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeclaredController">
+   <HBox alignment="CENTER" minHeight="70.0" prefHeight="100.0" prefWidth="200.0">
       <children>
-         <Label text="Kê khai và nộp hồ sơ">
+         <Label style="-fx-font-weight: 700;" text="Kê khai và nộp hồ sơ">
             <font>
                <Font size="24.0" />
             </font>
          </Label>
       </children>
    </HBox>
-   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+   <HBox alignment="CENTER" minHeight="42.0" prefHeight="36.0" prefWidth="600.0">
       <children>
-         <Label fx:id="label" text="Tên người nộp thuế">
+         <Label fx:id="label1" prefWidth="150.0" text="Mẫu tờ khai">
             <HBox.margin>
                <Insets right="20.0" />
-            </HBox.margin></Label>
-         <TextField fx:id="name" prefWidth="200.0" />
+            </HBox.margin>
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <TextField fx:id="txtlabel" editable="false" prefWidth="200.0">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </TextField>
       </children>
    </HBox>
-   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+   <HBox alignment="CENTER" minHeight="42.0" prefWidth="200.0">
       <children>
-         <Label prefWidth="100.0" text="Loại giấy tờ">
+         <Label fx:id="label" prefWidth="150.0" text="Tên người nộp thuế">
             <HBox.margin>
                <Insets right="20.0" />
             </HBox.margin>
-         </Label>
-         <ComboBox fx:id="comboBoxtype" onAction="#setComboBoxChanged" prefWidth="200.0" promptText="--Loại giấy tờ--" />
-      </children></HBox>
-   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <font>
+               <Font size="14.0" />
+            </font></Label>
+         <TextField fx:id="name" prefWidth="200.0">
+            <font>
+               <Font size="14.0" />
+            </font></TextField>
+      </children>
+   </HBox>
+   <HBox alignment="CENTER" minHeight="42.0" prefWidth="200.0">
       <children>
-         <Label prefWidth="100.0" text="Số giấy tờ">
+         <Label prefWidth="150.0" text="Loại giấy tờ">
             <HBox.margin>
                <Insets right="20.0" />
             </HBox.margin>
+            <font>
+               <Font size="14.0" />
+            </font>
          </Label>
-         <TextField fx:id="numDocument" prefWidth="200.0" />
+         <ComboBox fx:id="comboBoxtype" prefWidth="200.0" promptText="--Loại giấy tờ--" />
       </children></HBox>
-   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+   <HBox alignment="CENTER" minHeight="42.0" prefWidth="200.0">
       <children>
-         <Label prefWidth="100.0" text="Ngày cấp">
+         <Label prefWidth="150.0" text="Số giấy tờ">
             <HBox.margin>
                <Insets right="20.0" />
             </HBox.margin>
+            <font>
+               <Font size="14.0" />
+            </font>
          </Label>
-         <TextField fx:id="releaseDate" prefWidth="200.0" />
+         <TextField fx:id="numDocument" prefWidth="200.0">
+            <font>
+               <Font size="14.0" />
+            </font></TextField>
       </children></HBox>
-   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+   <HBox alignment="CENTER" minHeight="42.0" prefWidth="200.0">
       <children>
-         <Label prefWidth="100.0" text="Email">
+         <Label prefWidth="150.0" text="Ngày cấp">
             <HBox.margin>
                <Insets right="20.0" />
             </HBox.margin>
+            <font>
+               <Font size="14.0" />
+            </font>
          </Label>
-         <TextField fx:id="email" prefWidth="200.0" />
+         <TextField fx:id="releaseDate" prefWidth="200.0" promptText="yyyy-MM-dd">
+            <font>
+               <Font size="14.0" />
+            </font></TextField>
       </children></HBox>
+   <HBox alignment="CENTER" minHeight="42.0" prefWidth="200.0">
+      <children>
+         <Label prefWidth="150.0" text="Email">
+            <HBox.margin>
+               <Insets right="20.0" />
+            </HBox.margin>
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <TextField fx:id="email" prefWidth="200.0">
+            <font>
+               <Font size="14.0" />
+            </font></TextField>
+      </children></HBox>
+   <VBox alignment="CENTER" minHeight="30.0" prefHeight="30.0" prefWidth="600.0">
+      <children>
+         <Label fx:id="txtNotification" prefHeight="20.0" prefWidth="277.0" textFill="#ff420a">
+            <font>
+               <Font size="14.0" />
+            </font>
+            <VBox.margin>
+               <Insets left="250.0" />
+            </VBox.margin>
+         </Label>
+      </children>
+   </VBox>
    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
       <children>
-         <Button fx:id="continueBtn" mnemonicParsing="false" prefWidth="100.0" text="Tiếp tục">
+         <Button fx:id="continueBtn" mnemonicParsing="false" onAction="#continueButtonClicked" prefWidth="100.0" text="Tiếp tục">
             <HBox.margin>
                <Insets left="20.0" right="20.0" />
             </HBox.margin>
+            <font>
+               <Font size="14.0" />
+            </font>
          </Button>
-         <Button fx:id="backBtn" mnemonicParsing="false" prefWidth="100.0" text="Quay lại">
+         <Button fx:id="backBtn" mnemonicParsing="false" onAction="#backButtonClicked" prefWidth="100.0" text="Quay lại">
             <HBox.margin>
                <Insets left="20.0" right="20.0" />
             </HBox.margin>
+            <font>
+               <Font size="14.0" />
+            </font>
          </Button>
       </children></HBox>
 </VBox>

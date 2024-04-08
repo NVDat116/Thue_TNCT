@@ -36,6 +36,16 @@
                         <MenuItem fx:id="tracuuItem" mnemonicParsing="false" text="Tra cứu hồ sơ" />
                      </items>
                   </Menu>
+                  <Menu mnemonicParsing="false" text="Tính thuế">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Tính thuế" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Đóng thuế">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Đóng thuế" />
+                    </items>
+                  </Menu>
                </menus>
             </MenuBar>
          </children>
@@ -44,8 +54,8 @@
          <font>
             <Font size="14.0" />
          </font></Label>
-      <ComboBox fx:id="comboBox" layoutX="199.0" layoutY="167.0" onAction="#setComboBoxDoituong" prefHeight="25.0" prefWidth="315.0" promptText="---Chọn đối tượng---" styleClass="combo-box" />
-      <Button fx:id="submitBtn" layoutX="263.0" layoutY="245.0" mnemonicParsing="false" text="Xác nhận">
+      <ComboBox fx:id="comboBox" layoutX="199.0" layoutY="167.0" maxWidth="315.0" prefWidth="315.0" promptText="---Chọn đối tượng---" style="-fx-font-size: 14px" styleClass="combo-box" />
+      <Button fx:id="submitBtn" layoutX="263.0" layoutY="245.0" mnemonicParsing="false" onAction="#submitButtonClicked" text="Xác nhận">
          <font>
             <Font size="14.0" />
          </font></Button>
@@ -53,10 +63,15 @@
          <font>
             <Font size="14.0" />
          </font></Button>
-      <Button fx:id="registerBtn" onAction="#registerButtonClicked" layoutX="488.0" layoutY="35.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Đăng ký">
+      <Button fx:id="registerBtn" layoutX="488.0" layoutY="35.0" mnemonicParsing="false" onAction="#registerButtonClicked" prefHeight="30.0" prefWidth="90.0" text="Đăng ký">
          <font>
             <Font size="14.0" />
          </font></Button>
+      <Label fx:id="notificationS" layoutX="199.0" layoutY="200.0" prefHeight="20.0" prefWidth="315.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
 
    </children>
 </AnchorPane>

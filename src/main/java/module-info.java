@@ -4,6 +4,7 @@ module com.example.thue_tnct {
     requires javafx.fxml;
 
     requires org.kordamp.bootstrapfx.core;
+    requires java.sql;
 
     opens com.example.thue_tnct to javafx.fxml;
     exports com.example.thue_tnct;

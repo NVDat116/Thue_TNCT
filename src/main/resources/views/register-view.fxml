@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="516.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterController">
    <children>
       <HBox alignment="CENTER" prefHeight="151.0" prefWidth="516.0">
@@ -31,12 +30,18 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField>
+            <TextField fx:id="numThue">
                <font>
                   <Font size="14.0" />
                </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
             </TextField>
          </children>
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
@@ -48,12 +53,18 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <PasswordField>
+            <PasswordField fx:id="password">
                <font>
                   <Font size="14.0" />
                </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
             </PasswordField>
          </children>
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
@@ -65,12 +76,14 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField>
+            <PasswordField fx:id="rePassword" prefHeight="30.0" prefWidth="173.0">
                <font>
                   <Font size="14.0" />
-               </font>
-            </TextField>
+               </font></PasswordField>
          </children>
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
@@ -82,12 +95,18 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField>
+            <TextField fx:id="email">
                <font>
                   <Font size="14.0" />
                </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
             </TextField>
          </children>
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
@@ -99,28 +118,29 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField>
+            <TextField fx:id="phone">
                <font>
                   <Font size="14.0" />
                </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
             </TextField>
          </children>
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <HBox alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="516.0">
          <children>
-            <Label prefWidth="120.0" text="Mã xác nhận">
+            <Label fx:id="labelmess" prefHeight="20.0" prefWidth="274.0" textFill="#f56207">
+               <font>
+                  <Font size="14.0" />
+               </font>
                <HBox.margin>
-                  <Insets right="20.0" />
+                  <Insets top="5.0" />
                </HBox.margin>
-               <font>
-                  <Font size="14.0" />
-               </font>
             </Label>
-            <TextField>
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="94.0" prefWidth="516.0">
@@ -133,7 +153,7 @@
                   <Insets bottom="40.0" left="20.0" right="20.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false"  prefWidth="100.0" text="Đăng ký">
+            <Button fx:id="registerButton" mnemonicParsing="false" onAction="#registerButtonClicked" prefWidth="100.0" text="Đăng ký">
                <font>
                   <Font size="14.0" />
                </font>
